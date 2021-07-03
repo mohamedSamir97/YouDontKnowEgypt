@@ -1,0 +1,25 @@
+.height{
+  height: 81.6vh;
+}
+.form-container form {
+  width: 400px;
+  margin: auto;
+}
+.form-container form h2 {
+  color: #fff;
+}
+button[type="submit"] {
+  background-color: #0a438b !important;
+  color: #fff;
+  cursor: pointer;
+}
+p {
+  color: #a39191;
+}
+p a {
+  color: #c88741;
+  cursor: pointer;
+}
+p a:hover {
+  color: #c88741;
+}

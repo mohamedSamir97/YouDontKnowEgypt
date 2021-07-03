@@ -1,0 +1,26 @@
+.height{
+  height: 77vh;
+}
+.form-container form {
+  width: 400px;
+  margin: 30px auto;
+}
+.form-container form h2 {
+  color: #60ADFF;
+  font-weight: bold;
+}
+button[type="submit"] {
+  background-color:#fff;
+  color: white;
+  cursor: pointer;
+  background-color: #0a438b !important;
+
+}
+
+h2{
+  padding: 20px;
+}
+.alert-danger{
+  background-color: #60ADFF !important;
+  color: white !important;
+}

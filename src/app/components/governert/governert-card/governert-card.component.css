@@ -1,0 +1,10 @@
+img{
+    height: 300px;
+}
+.card{
+    opacity: 85%;
+}
+.card:hover{
+    transition: linear .5s;
+    opacity: 100%;
+}

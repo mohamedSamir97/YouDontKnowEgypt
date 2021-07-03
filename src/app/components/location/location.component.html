@@ -1,0 +1,73 @@
+<div class="container" *ngIf="location">
+    <div class="container">
+        <div class="headings">
+            <span class="hr"></span>
+            <h1 class="text-center">{{location.name}}</h1>
+            <span class="hr"></span>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button style="display: block;" *ngIf="authService.user.isAdmin" class="btn btn-danger" (click)="delete()">delete</button>
+        </div>
+
+        <div style="height: 20px;"></div>
+        <div class="card mb-3" style="padding:10px;">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <img class="img-fluid" *ngIf="locationImages&&locationImages[0]" [src]="locationImages[0].imagePath" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                    <h2>Governorate</h2>
+                    <p>{{governerate}}</p>
+                    <hr>
+                    <h2>Description</h2>
+                    <p>{{location.description}}</p>
+                    <hr>
+                    <h2>Category</h2>
+                    <p>{{category}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="headings">
+            <span class="hr"></span>
+            <h1>Gallery</h1>
+            <span class="hr"></span>
+        </div>
+            <div class="row lastrow">
+                <img *ngFor="let image of locationImages" [src]="image.imagePath" alt="" class="col-md-4">
+            </div>
+
+
+            <div class="headings">
+              <span class="hr"></span>
+              <h1>Comments</h1>
+              <span class="hr"></span>
+          </div>
+
+            <div class="scom">
+
+  
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter Comment" aria-label="Recipient's username" [(ngModel)]="postedComment" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                  <button class="btn btn-outline-primary" type="button" (click)="postComment()">Comment</button>
+              </div>
+            </div>
+            <div class="comments" *ngFor="let comment of comments">
+              <div class="media">
+                <img class="mr-3" src="../../../assets/user.png" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h3  class="mt-0">{{comment.user.name}}</h3>
+                  <div class="comment">
+                    {{comment.comment1}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <br>
+
+
+</div>
